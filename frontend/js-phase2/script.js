@@ -69,8 +69,8 @@ function fact(n){
 
 
 
-(()=>{console.log("IIFE is executed")}
-)();
+// (()=>{console.log("IIFE is executed")}
+// )();
 
 function counter(){
     let cnt=0;
