@@ -38,25 +38,56 @@
 
 // console.log(rev("ritik"));
 
-let c=0
+// let c=0
 
-function sum(...num){
-   for(let i=0;i<num.length;i++){
-    c+=num[i]
-   }
-   return c
+// function sum(...num){
+//    for(let i=0;i<num.length;i++){
+//     c+=num[i]
+//    }
+//    return c
+// }
+
+// let res=sum(5,2,3)
+
+// let cntVowel=0
+
+// var vow=(str)=>{
+//     for(let i=0;i<str.length;i++){
+//         if(str[i]==='a'||str[i]==='e'|| str[i]==='i'|| str[i]==='o'||str[i]==='u') cntVowel++;
+//     }
+//     return cntVowel
+// }
+
+// let p=vow("Ritik")
+
+
+
+function fact(n){
+    if(n==0||n==1) return 1;
+    return n*fact(n-1);
 }
 
-let res=sum(5,2,3)
 
-let cntVowel=0
 
-var vow=(str)=>{
-    for(let i=0;i<str.length;i++){
-        if(str[i]==='a'||str[i]==='e'|| str[i]==='i'|| str[i]==='o'||str[i]==='u') cntVowel++;
+(()=>{console.log("IIFE is executed")}
+)();
+
+function counter(){
+    let cnt=0;
+    return function(){
+        return cnt++;
     }
-    return cntVowel
+    
 }
 
-let p=vow("Ritik")
+let inc=counter();
+//currynig function
+
+function add(a){
+    return function(b){
+        return function(c){
+            return a+b+c;
+        }
+    }
+}
 
